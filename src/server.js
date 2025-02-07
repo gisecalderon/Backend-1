@@ -28,13 +28,8 @@ app.use('/api/productos', productRouter)
 app.use('/api/carts', cartRouter)
 app.use('/api/chat', chatRouter)
 app.use('/upload', multerRouter)
-const productos =[
-    {nombre: "Remera S", marca: "GSC", precio: 16800, stock: 4, status: true},
-    {nombre: "Remera T", marca: "NMV", precio: 20400, stock: 2, status: true},
-    {nombre: "Remera J", marca: "MAPF", precio: 35000, stock: 9, status: false}
-]
 app.get('/', (req,res) => {
-    res.render('/templates/productos',{productos: productos, js: 'productos.js', css: 'productos.css'})
+    res.status(200).send("Ok")
 })
 let mensajes = []
 io.on('connection',(socket) =>{

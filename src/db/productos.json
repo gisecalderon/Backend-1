@@ -1,1 +1,20 @@
-[]
+[{
+    "title": "Remera",
+    "description": "Boxifit",
+    "code": "JC2006",
+    "category": "Ropa",
+    "price": 20500,
+    "stock": 7,
+    "status": true
+},
+
+{
+    "title": "Remera",
+    "description": "Oversize",
+    "code": "GC1998",
+    "category": "Ropa",
+    "price": 14600,
+    "stock": 5,
+    "status":false
+}
+]

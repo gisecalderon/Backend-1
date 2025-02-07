@@ -15,7 +15,7 @@ const productos = JSON.parse(productosData);
 productRouter.get('/', (req,res) => {
     const {limit} = req.query
     const products =products.slice(0, limit) 
-    res.status(200).send(productos)
+    res.status(200).render('/templates/home',{products: productos, js: 'productos.js', css: 'productos.css'})
 })
 
 // Consultar producto via ID
