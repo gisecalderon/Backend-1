@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Productos en Tiempo Real</title>
+</head>
+<body>
+  <h1>Productos en Tiempo Real</h1>
+  <ul id="products-list">
+    <!-- Aquí se cargan los productos -->
+  </ul>
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    const socket = io();
+
+    socket.on('updateProducts', (products) => {
+      const productList = document.getElementById('products-list');
+      productList.innerHTML = products.map(product => `<li>${product.title} - ${product.price}</li>`).join('');
+    });
+  </script>
+</body>
+</html>
